@@ -18,8 +18,8 @@ router.get('/test', function(req,res,next){
 });
 
 //regular express route
-router.get('/jeremy/*', function(req,res,next){
-  res.write('you got Jeremy : ' + req.params[0]);
+router.get('/jeremy/:id', function(req,res,next){
+  res.write('you got Jeremy with an id: ' + req.params.id);
   res.end();
 })
 
